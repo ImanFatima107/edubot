@@ -3,6 +3,9 @@
 /node_modules
 /build
 
+# Portable Git (should not be in repo)
+/MinGit
+
 # Logs
 logs
 *.log
