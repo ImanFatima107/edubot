@@ -109,7 +109,8 @@ export default function Home() {
     setLoadingStep("Connecting to Edubot AI service...");
 
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000/edubot/roadmap";
+      const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = `${baseUrl.replace(/\/+$/, '')}/edubot/roadmap`;
       
       const response = await fetch(apiUrl, {
         method: "POST",
